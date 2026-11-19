@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Switched On · Gadgets worth buying</title>
+  <meta name="description" content="Smart home, home cinema and gadget picks for UK homes from @switchedon.home, each backed by an expert review. A fresh pick every day.">
+  <meta name="theme-color" content="#141311">
+  <meta property="og:title" content="Switched On · Gadgets worth buying">
+  <meta property="og:description" content="Smart home, home cinema and gadget picks for UK homes, each backed by an expert review.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bricolage-bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="top wrap">
+    <a class="brand" href="./" aria-label="Switched On home">
+      <img src="assets/favicon.svg" width="40" height="40" alt="">
+      <span>SWITCHED ON</span>
+    </a>
+    <a class="ig" id="igLink" href="https://www.instagram.com/switchedon.home/" rel="noopener" target="_blank">@switchedon.home</a>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="label">SMART HOME · HOME CINEMA · GADGETS</p>
+      <h1>Gadgets <em>worth</em> buying.</h1>
+      <p class="lede">Picks for UK homes, each one backed by an expert review you can read. A fresh pick every day.</p>
+    </section>
+
+    <section class="wrap" aria-labelledby="potdTitle">
+      <h2 class="label" id="potdTitle"><span class="dot"></span>PICK OF THE DAY · <span id="today">TODAY</span></h2>
+      <div id="potd" class="potd" aria-live="polite"></div>
+    </section>
+
+    <section class="wrap" id="weekWrap" hidden>
+      <div class="week">
+        <p class="label" id="weekLabel">THIS WEEK</p>
+        <p class="week-h" id="weekHeadline"></p>
+        <p class="week-n" id="weekNote"></p>
+      </div>
+    </section>
+
+    <section class="wrap" aria-labelledby="allTitle">
+      <div class="list-head">
+        <h2 id="allTitle">Today's shortlist</h2>
+        <div class="chips" role="tablist" aria-label="Filter by category">
+          <button class="chip on" data-cat="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-cat="home-cinema" role="tab" aria-selected="false">Home cinema</button>
+          <button class="chip" data-cat="smart-home" role="tab" aria-selected="false">Smart home</button>
+          <button class="chip" data-cat="gadgets" role="tab" aria-selected="false">Gadgets</button>
+        </div>
+      </div>
+      <div id="grid" class="grid"></div>
+      <noscript><p class="lede">Turn on JavaScript to see today's picks.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p class="disclose"><strong>Affiliate disclosure.</strong> As an Amazon Associate I earn from qualifying purchases. The Amazon buttons on this page are affiliate links: if you buy through one, Switched On may earn a small commission at no extra cost to you.</p>
+    <p>Each pick is based on the published expert review linked on its card. Prices and stock change all the time, so check the current price (and its history on <a href="https://pricespy.co.uk/" rel="noopener" target="_blank">PriceSpy</a> or <a href="https://uk.camelcamelcamel.com/" rel="noopener" target="_blank">CamelCamelCamel</a>) before you buy.</p>
+    <p class="label small">LIST UPDATED <span id="updated">—</span> · © <span id="year">2026</span> SWITCHED ON</p>
+  </footer>
+
+  <script src="assets/art.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
