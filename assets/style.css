@@ -4,14 +4,17 @@
 @font-face { font-family: "Inter"; src: url("fonts/inter-semibold.woff") format("woff"); font-weight: 600; font-display: swap; }
 
 :root {
-  --bg: #141311;
-  --panel: #1d1b18;
+  --bg: #F6F1E8;
+  --panel: #FFFFFF;
+  --stage: #EDE5D7;
   --kit: #2c2924;
-  --line: #3a3630;
-  --cream: #F1ECE3;
-  --muted: #B9B1A4;
-  --faint: #8E877B;
+  --line: #E3DACB;
+  --cream: #1B1916;
+  --muted: #5C554A;
+  --faint: #7A7266;
   --amber: #F5A623;
+  --amber-text: #A35F00;
+  --on-amber: #1B1916;
   --radius: 18px;
 }
 
@@ -40,7 +43,7 @@ a { color: var(--cream); }
 /* header */
 .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 20px; padding-bottom: 8px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand img { border-radius: 9px; }
+.brand img { border-radius: 9px; box-shadow: 0 0 0 1px var(--line); }
 .brand span { font: 400 15px "JBM", monospace; letter-spacing: .16em; color: var(--muted); }
 .ig {
   font: 400 13px "JBM", monospace; letter-spacing: .06em; color: var(--cream); text-decoration: none;
@@ -54,7 +57,7 @@ h1 {
   font: 700 clamp(48px, 11vw, 112px)/.95 "Brico", system-ui, sans-serif;
   letter-spacing: -.025em; margin: 0 0 18px;
 }
-h1 em { font-style: normal; color: var(--amber); }
+h1 em { font-style: normal; color: var(--amber-text); }
 .lede { color: var(--muted); font-size: 18px; max-width: 34em; margin: 0; }
 
 h2 { font: 700 32px/1.1 "Brico", sans-serif; letter-spacing: -.02em; margin: 0; }
@@ -67,7 +70,7 @@ h2.label { font: 400 13px/1.4 "JBM", monospace; letter-spacing: .16em; display: 
   background: var(--panel); border: 1px solid var(--line); border-radius: 24px; overflow: hidden;
   margin-bottom: 28px;
 }
-.potd .art { background: #181613; aspect-ratio: 4 / 3; display: grid; place-items: center; }
+.potd .art { background: var(--stage); aspect-ratio: 4 / 3; display: grid; place-items: center; }
 .potd .art svg { width: 82%; height: auto; }
 .potd .body { padding: 24px 20px 26px; }
 .potd h3 { font: 700 clamp(34px, 7vw, 56px)/1 "Brico", sans-serif; letter-spacing: -.025em; margin: 6px 0 14px; }
@@ -86,7 +89,7 @@ h2.label { font: 400 13px/1.4 "JBM", monospace; letter-spacing: .16em; display: 
 .week .label { margin-bottom: 8px; }
 .week-h { font: 700 22px/1.2 "Brico", sans-serif; letter-spacing: -.01em; margin: 0 0 6px; }
 .week-n { margin: 0; color: var(--muted); }
-.week-n a { color: var(--amber); }
+.week-n a { color: var(--amber-text); }
 
 /* list */
 .list-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
@@ -96,7 +99,7 @@ h2.label { font: 400 13px/1.4 "JBM", monospace; letter-spacing: .16em; display: 
   background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; cursor: pointer;
 }
 .chip:hover { color: var(--cream); }
-.chip.on { background: var(--amber); border-color: var(--amber); color: #141311; }
+.chip.on { background: var(--amber); border-color: var(--amber); color: var(--on-amber); }
 .chip:focus-visible, .btn:focus-visible, a:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
 
 .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 56px; }
@@ -104,10 +107,11 @@ h2.label { font: 400 13px/1.4 "JBM", monospace; letter-spacing: .16em; display: 
 @media (min-width: 980px) { .grid { grid-template-columns: repeat(3, 1fr); } }
 
 .card {
+  box-shadow: 0 1px 2px rgba(60,45,20,.06), 0 6px 20px rgba(60,45,20,.06);
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
   overflow: hidden; display: flex; flex-direction: column;
 }
-.card .art { position: relative; background: #181613; aspect-ratio: 4 / 3; display: grid; place-items: center; }
+.card .art { position: relative; background: var(--stage); aspect-ratio: 4 / 3; display: grid; place-items: center; }
 .card .art svg { width: 78%; height: auto; }
 /* real product photos: shown on a light panel so white-background shots sit naturally */
 .art.photo { background: #ffffff; }
@@ -121,21 +125,21 @@ h2.label { font: 400 13px/1.4 "JBM", monospace; letter-spacing: .16em; display: 
 .badge {
   position: absolute; top: 12px; left: 12px; z-index: 2;
   font: 400 11px "JBM", monospace; letter-spacing: .12em; text-transform: uppercase;
-  background: var(--amber); color: #141311; border-radius: 999px; padding: 5px 10px;
+  background: var(--amber); color: var(--on-amber); border-radius: 999px; padding: 5px 10px;
 }
 .card .body { padding: 18px 18px 20px; display: flex; flex-direction: column; flex: 1; }
 .card h3 { font: 700 24px/1.1 "Brico", sans-serif; letter-spacing: -.015em; margin: 4px 0 10px; }
 .cat { font: 400 12px "JBM", monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); margin: 0; }
-.bestfor { margin: 0 0 8px; color: var(--amber); font-weight: 600; }
+.bestfor { margin: 0 0 8px; color: var(--amber-text); font-weight: 600; }
 .why { margin: 0 0 14px; color: var(--cream); }
 .src { font: 400 12px/1.5 "JBM", monospace; color: var(--faint); margin: 0 0 18px; letter-spacing: .02em; }
 .src a { color: var(--muted); }
 .btn {
   margin-top: auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  background: var(--cream); color: #141311; text-decoration: none; font-weight: 600;
+  background: var(--cream); color: #FFFFFF; text-decoration: none; font-weight: 600;
   border-radius: 12px; padding: 13px 16px; min-height: 48px;
 }
-.btn:hover { background: var(--amber); }
+.btn:hover { background: var(--amber); color: var(--on-amber); }
 .btn .arr { transition: transform .15s; }
 .btn:hover .arr { transform: translateX(3px); }
 .potd .btn { width: 100%; }
